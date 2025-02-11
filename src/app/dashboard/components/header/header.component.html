@@ -1,4 +1,54 @@
-<div class="border">
-    <p>header works!</p>
+<nav class="navbar navbar-light bg-light border-bottom px-4">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://flowbite.com/docs/images/logo.svg" alt="Logo" height="40">
+        <span class="ms-2 fs-5 fw-semibold">Flowbite</span>
+    </a>
 
-</div>
+    <div class="d-flex align-items-center gap-4">
+        <a href="#" class="Header-a text-dark text-decoration-none">Home</a>
+        <a href="#" class="Header-a text-dark text-decoration-none">About</a>
+        <a href="#" class="Header-a text-dark text-decoration-none">Contact</a>
+
+        <!-- Dropdown Usuario -->
+        <div class="dropdown">
+            <button class="btn btn-light p-0 border-0" type="button" id="userDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" alt="User"
+                    class="rounded-circle" width="40" height="40">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li class="px-3 py-2">
+                    <strong style="font-size:13px">Juan Tasayco</strong>
+                    <p class="text-muted small mb-0" style="font-size:12px">Administrador</p>
+                </li>
+                <li>
+                    <hr class="Header-a dropdown-divider">
+                </li>
+                <li><a class="Header-a dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="Header-a dropdown-item" href="#">Settings</a></li>
+                <li><a class="Header-a dropdown-item" href="#">Earnings</a></li>
+                <li><a class="Header-a dropdown-item text-danger" href="#">Sign out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 
+
+ <div class="dropdown">
+          <button class="btn btn-light border rounded-circle p-0" type="button" data-bs-toggle="dropdown">
+            <img src="https://via.placeholder.com/40" class="rounded-circle" alt="User" width="40" height="40">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li class="px-3 py-2">
+              <strong>Bonnie Green</strong>
+              <p class="text-muted small mb-0">namecom</p>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Dashboard</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Earnings</a></li>
+            <li><a class="dropdown-item text-danger" href="#">Sign out</a></li>
+          </ul>
+        </div>
+ -->
