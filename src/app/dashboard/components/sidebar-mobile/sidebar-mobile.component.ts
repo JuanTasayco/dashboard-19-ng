@@ -1,14 +1,18 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, signal, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, OnInit, Renderer2, signal, ViewChild } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
   selector: 'app-sidebar-mobile',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './sidebar-mobile.component.html',
   styleUrl: './sidebar-mobile.component.scss'
 })
 export class SidebarMobileComponent implements AfterViewInit, OnInit {
+  sidebarService = inject(SidebarService);
   @ViewChild("sidebarComponent") sidebarComponent !: ElementRef;
   @ViewChild("buttonActionSidebar") buttonActionSidebar !: ElementRef;
+  @ViewChild("buttonToogleSidebar") buttonToogleSidebar !: ElementRef;
   previousWidth = signal(0);
   backdropElement?: any;
 
@@ -24,7 +28,11 @@ export class SidebarMobileComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
-
+    this.sidebarService.getSharingObservable.subscribe({
+      next: () => {
+        this.buttonToogleSidebar.nativeElement.click();
+      }
+    })
   }
 
   @HostListener('window:resize', ['$event'])

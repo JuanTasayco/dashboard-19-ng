@@ -16,8 +16,8 @@
         gap: 8px;
     }
 
-    &-li {
-        margin-left: 2.3rem;
+    &-ul {
+        margin-left: 1.8rem;
     }
 }
 
@@ -27,4 +27,17 @@
         position: relative; */
         max-width: 270px;
     }
+}
+
+/* arrow logic */
+
+.Sidebar-arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease; // suavizo giro
+    font-size: 0.5rem; // Reduce el tamaño de la flecha
+    color: #525b75;
+}
+
+button[aria-expanded="true"] .Sidebar-arrow {
+    transform: rotate(90deg); //girar flecha
 }

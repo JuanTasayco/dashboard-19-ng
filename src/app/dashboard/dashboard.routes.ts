@@ -1,6 +1,7 @@
 import { Routes } from "@angular/router";
-import { Test1Component } from "./pages/test1/test1.component";
+import { Test1Component, Test2Component, Test3Component, Test4Component } from "./pages/index";
 import { HomeComponent } from "./pages/home/home.component";
+
 
 export const DashBoardRoutes: Routes = [
     {
@@ -12,15 +13,15 @@ export const DashBoardRoutes: Routes = [
         },
         {
             path: "test2",
-            component: Test1Component
+            component: Test2Component
         },
         {
             path: "test3",
-            component: Test1Component
+            component: Test3Component
         },
         {
             path: "test4",
-            component: Test1Component
+            component: Test4Component
         },
         {
             path: "**",

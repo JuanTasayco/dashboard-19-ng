@@ -1,8 +1,6 @@
-<!-- Botón para abrir el sidebar -->
-<button class="btn btn-primary m-3 d-md-none" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+<button #buttonToogleSidebar class="btn btn-primary m-3 d-none" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
     Abrir Menú
 </button>
-
 <!-- Sidebar -->
 <div #sidebarComponent class="Sidebar offcanvas offcanvas-start show" tabindex="-1" id="sidebar">
     <div class="offcanvas-header">
@@ -12,46 +10,77 @@
     <div class="offcanvas-body">
         <ul class="list-unstyled ps-0">
             <li class="mb-1">
-                <button class="Sidebar-button btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
-                    data-bs-target="#home-collapse" aria-expanded="false">
+                <button class="Sidebar-button btn btn-toggle align-items-center rounded collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                    <span class="Sidebar-arrow">▶</span>
                     <img src="/svg/calendar.svg" alt="Logo">
                     Home
                 </button>
                 <div class="collapse" id="home-collapse">
                     <ul class="Sidebar-ul btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Overview</a></li>
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Updates</a></li>
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Reports</a></li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded" routerLink="/dashboard/test2">Overview</button>
+                        </li>
+                        <li>
+                            <button class="Sidebar-button btn btn-toggle align-items-center rounded collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#updates-collapse" aria-expanded="false">
+                                <span class="Sidebar-arrow">▶</span>
+                                Updates
+                            </button>
+                            <div class="collapse" id="updates-collapse">
+                                <ul class="Sidebar-ul btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><button
+                                            class="Sidebar-button btn btn-toggle align-items-center rounded">News</button>
+                                    </li>
+                                    <li><button
+                                            class="Sidebar-button btn btn-toggle align-items-center rounded">Alerts</button>
+                                    </li>
+                                    <li><button
+                                            class="Sidebar-button btn btn-toggle align-items-center rounded">Changelog</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded" routerLink="/dashboard/test3">Reports</button>
+                        </li>
                     </ul>
                 </div>
             </li>
             <li class="mb-1">
                 <button class="Sidebar-button btn btn-toggle align-items-center rounded collapsed"
                     data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                    <span class="Sidebar-arrow">▶</span>
                     <img src="/svg/user.svg" alt="Logo">
                     Dashboard
                 </button>
                 <div class="collapse" id="dashboard-collapse">
                     <ul class="Sidebar-ul btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Overview</a></li>
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Weekly</a></li>
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Monthly</a></li>
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Annually</a></li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded" routerLink="/dashboard/test1">Overview</button>
+                        </li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded">Weekly</button>
+                        </li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded">Monthly</button>
+                        </li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded">Annually</button>
+                        </li>
                     </ul>
                 </div>
             </li>
             <li class="mb-1">
                 <button class="Sidebar-button btn btn-toggle align-items-center rounded collapsed"
                     data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                    <span class="Sidebar-arrow">▶</span>
                     <img src="/svg/calendar.svg" alt="Logo">
                     Orders
                 </button>
                 <div class="collapse" id="orders-collapse">
                     <ul class="Sidebar-ul btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">New</a></li>
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Processed</a></li>
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Shipped</a></li>
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Returned</a></li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded">New</button></li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded">Processed</button>
+                        </li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded">Shipped</button>
+                        </li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded">Returned</button>
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -59,15 +88,18 @@
             <li class="mb-1">
                 <button class="Sidebar-button btn btn-toggle align-items-center rounded collapsed"
                     data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-                    <img src="/svg/calendar.svg" alt="Logo">
+                    <span class="Sidebar-arrow">▶</span>
+                    <img src="/svg/user.svg" alt="Logo">
                     Account
                 </button>
                 <div class="collapse" id="account-collapse">
                     <ul class="Sidebar-ul btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">New...</a></li>
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Profile</a></li>
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Settings</a></li>
-                        <li class="Sidebar-li"><a href="#" class="Sidebar-a link-dark rounded">Sign out</a></li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded">Profile</button>
+                        </li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded">Settings</button>
+                        </li>
+                        <li><button class="Sidebar-button btn btn-toggle align-items-center rounded">Logout</button>
+                        </li>
                     </ul>
                 </div>
             </li>
