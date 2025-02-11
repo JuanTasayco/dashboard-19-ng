@@ -22,6 +22,10 @@ export const DashBoardRoutes: Routes = [
             path: "test4",
             component: Test1Component
         },
+        {
+            path: "**",
+            redirectTo: "test1"
+        }
         ]
     }
 ]

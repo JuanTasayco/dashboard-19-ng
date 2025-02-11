@@ -3,6 +3,7 @@
 }
 
 .Sidebar {
+
     &-a {
         text-decoration: none;
         font-size: 12.8px;
@@ -10,9 +11,20 @@
 
     &-button {
         font-size: 12.8px;
+        display: flex;
+        align-items: center;
+        gap:8px;
     }
 
     &-li {
-        margin-left: 1.5rem;
+        margin-left: 2.3rem;
+    }
+}
+
+@media (min-width:768px) {
+    .Sidebar {
+        height: 100vh;
+        position: relative;
+        max-width: 270px;
     }
 }
