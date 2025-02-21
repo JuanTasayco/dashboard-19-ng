@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-forgot-password',
   imports: [ReactiveFormsModule],
@@ -38,6 +39,11 @@ export class ForgotPasswordComponent {
       this.forgotForm.markAllAsTouched();
     } else {
       console.log('Ingresando Correctamente');
+      Swal.fire({
+        title: "Correo enviado",
+        icon: "success",
+        draggable: true
+      });
     }
   }
 
