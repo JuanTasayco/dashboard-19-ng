@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -27,6 +28,13 @@ export class LoginComponent {
       this.loginForm.markAllAsTouched();
     } else {
       console.log('Ingresando Correctamente');
+
+      Swal.fire({
+        title: "Ingresando",
+        icon: "success",
+        draggable: true
+      });
+      this.loginForm.reset();
     }
   }
 
