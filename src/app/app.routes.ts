@@ -3,7 +3,7 @@ import { DashBoardRoutes } from './dashboard/dashboard.routes';
 
 export const routes: Routes = [
     {
-        path: "login",
+        path: "auth",
         loadChildren: () => import("./auth/login.routes").then(m => m.LoginRoutes),
     },
     {
@@ -12,6 +12,6 @@ export const routes: Routes = [
     },
     {
         path: "**",
-        redirectTo: "login"
+        redirectTo: "auth"
     }
 ];

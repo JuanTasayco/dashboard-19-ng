@@ -1,10 +1,16 @@
-.Login {
+.Home {
     font-size: 13px;
+
+    &-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     &-box {
         width: 100%;
         height: 90%;
-
         @media (min-width:768px) {
             height: 75%;
         }
@@ -13,12 +19,8 @@
     &-button {
         font-size: 13px;
     }
-
-    &-h1 {
-        font-size: 20px;
-    }
 }
 
-input::placeholder {
+input::placeholder{
     font-size: 13px;
 }
