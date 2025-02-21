@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -7,8 +7,11 @@ import { Router } from '@angular/router';
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
-export class CardComponent {
-  constructor(private router: Router) { }
+export class CardComponent implements OnInit {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+  ngOnInit(): void {
+
+  }
 
   redirecToForgotPassword() {
     this.router.navigate(["auth/forgot-password"]);

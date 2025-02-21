@@ -1,16 +1,15 @@
 <div class="Card m-auto ">
     <div class="Card-header"></div>
-    <div class="Card-body" style="border:2px solid red">
+    <div class="Card-body">
         <ng-content></ng-content>
     </div>
 
-    <div class="Card-footer d-flex flex-column justify-content-center align-items-center">
+    <div class="Card-footer d-flex flex-column justify-content-start align-items-center">
         <hr>
-        <p class="text-info" (click)="redirecToForgotPassword()">Olvidaste tu contraseña?</p>
+        <p class="text-info" style="cursor:pointer;" (click)="redirecToForgotPassword()">Olvidaste tu contraseña?</p>
 
         <div>
             <p>Powered By</p>
         </div>
     </div>
-
 </div>
