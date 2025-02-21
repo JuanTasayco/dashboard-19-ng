@@ -13,7 +13,4 @@ export class CardComponent implements OnInit {
 
   }
 
-  redirecToForgotPassword() {
-    this.router.navigate(["auth/forgot-password"]);
-  }
 }

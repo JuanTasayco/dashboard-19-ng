@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 })
 export class LoginComponent {
   formBuilder = inject(FormBuilder);
-
+  router = inject(Router);
   loginForm = this.formBuilder.group({
     email: [null, [Validators.required, Validators.email]],
     password: [null, [Validators.required]],
@@ -42,5 +43,9 @@ export class LoginComponent {
     }
 
     return errors[errorKeys];
+  }
+
+  redirecToForgotPassword() {
+    this.router.navigate(["auth/forgot-password"]);
   }
 }
