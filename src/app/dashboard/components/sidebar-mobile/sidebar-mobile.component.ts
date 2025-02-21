@@ -24,6 +24,7 @@ export class SidebarMobileComponent implements AfterViewInit, OnInit {
       this.renderer.addClass(this.sidebarComponent.nativeElement, "show");
     } else {
       this.renderer.removeClass(this.sidebarComponent.nativeElement, "show");
+      this.renderer.setAttribute(this.sidebarComponent.nativeElement, "data-bs-backdrop", "true");
     }
   }
 
@@ -44,19 +45,20 @@ export class SidebarMobileComponent implements AfterViewInit, OnInit {
       this.previousWidth.set(screenWidth);
     } else {
       if (screenWidth <= 767 && this.previousWidth() > 767) {
-        if (!backdrop) {
-          this.buttonActionSidebar.nativeElement.click();
-          this.renderer.removeClass(this.sidebarComponent.nativeElement, "show");
-        }
+         if (!backdrop) {
+           this.buttonActionSidebar.nativeElement.click();
+           this.renderer.removeClass(this.sidebarComponent.nativeElement, "show");
+         }
         this.buttonActionSidebar.nativeElement.click();
       }
 
       if (screenWidth > 767 && this.previousWidth() <= 767) {
 
         this.renderer.addClass(this.sidebarComponent.nativeElement, "show");
-        if (backdrop) {
-          this.renderer.removeChild(backdrop.parentNode, backdrop);
-        }
+          if (backdrop) {
+            this.renderer.removeChild(backdrop.parentNode, backdrop);
+          }
+
       }
 
       this.previousWidth.set(screenWidth);
