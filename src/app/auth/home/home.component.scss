@@ -1,5 +1,7 @@
 .Home {
     font-size: 13px;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
 
     &-container {
         display: flex;
@@ -11,6 +13,7 @@
     &-box {
         width: 100%;
         height: 90%;
+
         @media (min-width:768px) {
             height: 75%;
         }
@@ -19,8 +22,20 @@
     &-button {
         font-size: 13px;
     }
+
+    &-col {
+        &--white {
+            background-color: white;
+        }
+    }
+
+    &-img {
+        width: 100%;
+        height: 100%;
+
+    }
 }
 
-input::placeholder{
+input::placeholder {
     font-size: 13px;
 }
